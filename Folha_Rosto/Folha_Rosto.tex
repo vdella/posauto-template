@@ -21,25 +21,25 @@
     \end{scope}
 \end{tikzpicture}
 
-%LOGO 
-% Edite a imagem em um editor gráfico antes de incluí-la no documento LaTex. Ferramentas como GIMP, Inkscape, ou Photoshop podem ser usadas para alterar a cor da imagem (use o arquivo svg da pasta Figs_Folha_Rosto).
-\begin{tikzpicture}[remember picture, overlay]
-  % Adiciona a imagem com um deslocamento usando shift
-  \node at (current page.north west) [anchor=north west, xshift=4.75cm, yshift=-0.9cm] {
-    \includegraphics[width=3.7cm]{Folha_Rosto/Figs_Folha_Rosto/divulga-logo.png}
-  };
-\end{tikzpicture}
+%%LOGO
+%% Edite a imagem em um editor gráfico antes de incluí-la no documento LaTex. Ferramentas como GIMP, Inkscape, ou Photoshop podem ser usadas para alterar a cor da imagem (use o arquivo svg da pasta Figs_Folha_Rosto).
+%\begin{tikzpicture}[remember picture, overlay]
+%  % Adiciona a imagem com um deslocamento usando shift
+%  \node at (current page.north west) [anchor=north west, xshift=3.5cm, yshift=-0.9cm] {
+%    \includegraphics[width=6cm]{Folha_Rosto/Figs_Folha_Rosto/divulga-logo.png}
+%  };
+%\end{tikzpicture}
 
 % NOME DO JORNAL
 % Altere a cor e/ou tamanho da fonte no comando \myfontsizeNewstonFolhaRosto e \myfontsizeJornalFolhaRosto  em Structure.tex caso queira outra que não seja a da edição
 \begin{tikzpicture}[remember picture, overlay]
   % Adiciona o texto com um deslocamento usando shift
-  \node at (current page.north west) [anchor=north west, xshift=4.48cm, yshift=-5.95cm] {
-    {\norwester\myfontsizeNewstonFolhaRosto NEWSTON}
+  \node at (current page.north west) [anchor=north west, xshift=3.28cm, yshift=-3.95cm] {
+    {\norwester\myfontsizeNewstonFolhaRosto DIVULGA}
   };
    % Adiciona o texto com um deslocamento usando shift
-  \node at (current page.north west) [anchor=north west, xshift=4.6cm, yshift=-7.1cm] {
-    {\bebasneue\myfontsizeJornalFolhaRosto \textls[530]{JORNAL}}
+  \node at (current page.north west) [anchor=north west, xshift=3.31cm, yshift=-5.7cm] {
+    {\bebasneue\myfontsizeJornalFolhaRosto \textls[530]{AUTOMAÇÃO}}
   };
 \end{tikzpicture}
 
@@ -53,7 +53,7 @@
   \node[circle, draw=base, fill=base, minimum size=1cm, inner sep=0pt, text=white, shift={(2, -1.5)}] at (2,-1) {\abrilfatface\myfontsizeEditionFolhaRosto \NumeroEdicao};
 
   % Adicionar a palavra "Coleção" entre as duas linhas
-  \node[shift={(2, -2)}, anchor=center] at (0,-1) {\hammersmithone \myfontsizeColecaoData COLEÇÃO \ColecaoEdicao};
+  \node[shift={(2.1, -2)}, anchor=center] at (0,-1) {\hammersmithone \myfontsizeColecaoData COLEÇÃO \ColecaoEdicao};
 
   % Adicionar outra palavra ao lado de "Coleção"
   \node[shift={(2, -2)}, anchor=center] at (4,-1) {\hammersmithone \myfontsizeColecaoData \MakeUppercase{\DataEdicao}};
@@ -75,7 +75,7 @@
   \fill[base, shift={(0, -6.9)}] (\i+2, -1) circle (1pt);
 };
   % Logo UEM
-   \node[shift={(0, -8.2)}, anchor=center] at (4, -1) {\includegraphics[width=0.15\textwidth]{Figuras_Capa_ContraCapa/UEM_Logo_Modelo_Colorido.png}
+   \node[shift={(0, -8.5)}, anchor=center] at (4, -1) {\includegraphics[width=0.1\textwidth]{Figuras_Capa_ContraCapa/ufsc-logo.png}
     };
 \end{tikzpicture}
 
