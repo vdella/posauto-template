@@ -1,0 +1,307 @@
+\usepackage{graphicx}
+%\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage[small]{caption}
+%\usepackage[caption=false]{subfig}
+\usepackage{subfigure}
+\usepackage{float} % Para usar [H]
+%\usepackage{bbm}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[portuguese]{babel}
+\usepackage[brazilian]{babel} %Indica a língua a ser escrita
+\usepackage[normalem]{ulem}
+%\usepackage[left=00cm, right=00cm, top=0.5cm, bottom=1.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{minted}
+\usepackage{hyperref} 
+\hypersetup{colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue}
+	\usemintedstyle{perldoc}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{balance} % Para equilibrar as colunas
+\usepackage{indentfirst}
+\usepackage{epstopdf}
+\usepackage{animate}
+\usepackage{xmpmulti}
+\usepackage{multimedia}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{pdfpages}
+\usepackage{braket}
+
+%------------------------------------------------------------------
+% Cores - Sugestão: use uma cor parecida com a cor base (indico o site https://www.colorhexa.com/ para verificar os códigos de acordo com a cor da sua preferência)
+\definecolor{base}{HTML}{4F3B89} % Cor hexadecimal da edição (altere de acordo com a sua preferência)  EX: 893B4E 
+\definecolor{baseshadow}{HTML}{674DB2} % Cor hexadecimal do sombreamento dos textos na edição 
+\definecolor{baseechoshadow}{HTML}{C4BAE1} % Cor hexadecimal do sombreamento do sombreamento dos textos na edição 
+\setlength{\columnsep}{1cm}
+
+%------------------------------------------------------------
+% Comando para títulos de artigos
+\usepackage{tikz}
+\usetikzlibrary{calc} %Bibliotecas TikZ
+\newcommand{\mytitle}[1]{%
+    \newpage
+    \phantomsection
+    \begin{LARGE}
+        \begin{center}
+            \textcolor{base}{\textit{#1}}
+        \end{center}
+    \end{LARGE}
+     \markboth{#1}{#1} % Define o marcador do cabeçalho
+}
+% Comando para subtítulos de títulos de artigos
+\newcommand{\mytitlesubtitle}[1]{%
+    \vspace{-.2cm}
+    \begin{Large}
+        \begin{center}
+            \textcolor{base}{\textit{#1}}
+        \end{center}
+    \end{Large}
+}
+% Comando para subtítulos de artigos
+\newcommand{\mysubtitle}[1]{%
+       \phantomsection
+       \vspace{5pt} % Espaço acima do subtítulo
+       \begin{flushleft}
+            \textcolor{base}{\textbf{#1}}
+       \end{flushleft}
+     \vspace{5pt} % Espaço abaixo do subtítulo
+}
+
+% Configurando o cabeçalho
+\pagestyle{fancy}
+\fancyhf{}
+
+% Redefinindo a linha do cabeçalho com a cor e largura desejadas
+\renewcommand{\headrule}{%
+    \color{base} % Define a cor da linha
+    \hrule width\headwidth height4pt % Define a largura da linha
+    \vskip-\headrulewidth % Eleva a linha
+}
+
+% Garantir que a linha cubra toda a largura da página
+\fancyheadoffset[L]{\dimexpr\hoffset+2cm\relax} % Alinhar à esquerda com a margem esquerda
+\fancyheadoffset[R]{\dimexpr\hoffset+2cm\relax} % Alinhar à direita com a margem direita
+\fancyhead[L]{\textcolor{base}
+{\MakeUppercase{\large{\bf\hspace{0.3cm}\leftmark}}\vspace{0.35cm}}}
+\setlength{\headheight}{33pt} % Ajuste o valor conforme necessário para consertar o erro headheight quando surgir
+\setlength{\headsep}{35pt} % Ajusta a distância entre o cabeçalho e o texto
+\fancyfoot[C]{\thepage} % Numeração das páginas
+%\usepackage{flushend} % Pode ajudar a corrigir problemas de alinhamento
+% Definindo um estilo sem cabeçalho, mas com numeração de página
+\fancypagestyle{noheader}{
+  \fancyhf{} % Limpa cabeçalhos e rodapés
+  \renewcommand{\headrule}{%
+    \color{base} % Define a cor da linha
+    \hrule width\headwidth height0pt % Exlui a linha do cabeçalho
+    \vskip-\headrulewidth % Eleva a linha
+}
+  \fancyfoot[C]{\thepage} % Mantém o rodapé com numeração de página
+}
+
+
+\usepackage{lipsum}
+%\usepackage{indentfirst}
+\usepackage{anysize} % Para personalizar a largura das margens
+%\usepackage[margin=0.7874in]{geometry} % Define as margens
+\marginsize{2cm}{2cm}{0.5cm}{2cm} % Ordem: Esquerda, direita, superior, inferior. Padrão ABNT - Esquerda: 3 cm. Superior: 0.5 cm. Direita: 2 cm. Inferior: 2 cm.
+%\usepackage{geometry}
+\usepackage{marginnote}
+\setlength{\parindent}{20pt} %Indentação do parágrafo
+\usepackage{subcaption}
+\usepackage{subfigure}
+
+%FONTES
+\usepackage{anyfontsize} % Permite o uso de tamanhos de fonte arbitrários, independentemente dos tamanhos padrão
+\usepackage{microtype} % Ajuste de espaçamento entre letras
+\usepackage{fontspec} % Pacote para usar fontes TrueType e OpenType (só funciona compilando em LuaLaTex)
+\usepackage{enumitem} % Pacote para personalizar listas
+\usepackage{shadowtext} % Pacote para adicionar sombras ao texto
+\usepackage{setspace} % Pacote para aumentar ou diminuir o espaço entre linhas
+\usepackage{contour} % Para contornos em textos
+
+% Definindo a largura do contorno (altere se precisar)
+%\contourlength{2pt} % Largura do contorno
+
+
+% Comandos personalizados para as fontes 
+\newfontfamily{\hammersmithone}[Path = ./Fontes/]{HammersmithOne-Regular}
+\newfontfamily{\bebasneue}[Path = ./Fontes/]{BebasNeue-Regular}
+\newfontfamily{\bebasneuebold}[Path = ./Fontes/]{BebasNeue-Bold}
+\newfontfamily{\cooperheavy}[Path = ./Fontes/]{CooperHewitt-Heavy}
+\newfontfamily{\cooperbold}[Path = ./Fontes/]{CooperHewitt-Bold}
+\newfontfamily{\cooperbook}[Path = ./Fontes/]{CooperHewitt-Book}
+\newfontfamily{\norwester}[Path = ./Fontes/]{Norwester}
+\newfontfamily{\abrilfatface}[Path = ./Fontes/]{AbrilFatface-Regular}
+\newfontfamily{\leaguespartanbold}[Path = ./Fontes/]{LeagueSpartan-Bold}
+\newfontfamily{\glacialbold}[Path = ./Fontes/]{Glacial-indifference-bold}
+\newfontfamily{\glacialregular}[Path = ./Fontes/]{Glacial-indifference-regular}
+\newfontfamily{\clearsansthin}[Path = ./Fontes/]{ClearSans-Thin}
+\newfontfamily{\clearsansbold}[Path = ./Fontes/]{ClearSans-Bold}
+
+
+% Definir um comando para usar fontes com tamanhos e cores personalizadas
+\newcommand{\myfontsizeNewstonCapa}{\fontsize{110pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeNewstonFolhaRosto}{\fontsize{32pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeJornalCapa}{\fontsize{82pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeJornalFolhaRosto}{\fontsize{23pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeTemaCapaVerticalECC}{\fontsize{15pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTema}{\fontsize{37pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTitulosArtigosCapa}{\fontsize{25pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTitulosArtigosCapaDois}{\fontsize{20pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTituloTema}{\fontsize{73pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTituloTemaEsm}{\fontsize{75pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeColecaoData}{\fontsize{11pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeColecaoTema}{\fontsize{19pt}{0pt}\selectfont\color{gray}}
+\newcommand{\myfontsizeDivulgacaoCientifica}{\fontsize{45pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeSumario}{\fontsize{82pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeSumarioData}{\fontsize{27pt}{0pt}\selectfont\color{base}}
+\newcommand{\myfontsizeNewstonSumarioECC}{\fontsize{29pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeJornalSumarioECC}{\fontsize{20pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeEdAntSite}{\fontsize{10pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeTextoCC}{\fontsize{16pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeUsuario}{\fontsize{12pt}{0pt}\selectfont\color{white}}
+\newcommand{\myfontsizeSumarioTitulos}{\fontsize{16pt}{0pt}\selectfont}
+\newcommand{\myfontsizeSumarioResumo}{\fontsize{12pt}{0pt}\selectfont}
+\newcommand{\myfontsizeequipe}{\fontsize{42.6pt}{48pt}\selectfont}
+\newcommand{\myfontsizecolabbebas}{\fontsize{27pt}{48pt}\selectfont}
+\newcommand{\myfontsizeEdition}{\fontsize{21.3pt}{48pt}\selectfont}
+\newcommand{\myfontsizeEditionFolhaRosto}{\fontsize{18pt}{0pt}\selectfont}
+\newcommand{\myfontsizeColaboradores}{\fontsize{12.6pt}{48pt}\selectfont}
+
+% Comando personalizado para texto com sombra
+\newcommand{\shadowedText}[2][black]{%
+    \begin{tikzpicture}[baseline=(T.base)]
+        \node[inner sep=0pt, outer sep=0pt, text=#1] (S) at (0.06, -0.06) {#2}; % Ajuste (x, y) conforme necessário para mudar a posição da sombra em relação ao texto.
+        \node[inner sep=0pt, outer sep=0pt, text=white] (T) at (0, 0) {#2};
+    \end{tikzpicture}%
+}
+
+% Comando para texto com sombra e efeito eco
+\newcommand{\echoShadowText}[3]{%
+    \begin{tikzpicture}[baseline=(T.base)]
+        % Sombra principal com deslocamento maior
+        \node[inner sep=0pt, outer sep=0pt, text=#1, opacity=0.6] (S1) at (0.08, -0.08) {#3};
+        % Sombra secundária com deslocamento menor
+        \node[inner sep=0pt, outer sep=0pt, text=#2, opacity=0.6] (S2) at (0.04, -0.04) {#3};
+        % Texto principal
+        \node[inner sep=0pt, outer sep=0pt, text=white] (T) at (0, 0) {#3};
+    \end{tikzpicture}%
+}
+
+%
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+% Define o estilo dos títulos do sumário
+\titlecontents{chapter}
+  [0em] % Margem esquerda
+  {\glacialbold} % Fonte e estilo do título
+  {\contentslabel{2em}} % Largura da etiqueta
+  {} % Texto à esquerda do título
+  {\hspace{0.1em}\titlerule*[0.4pc]{.}\hspace{-0.3em}\contentspage} % Linha de pontos até o número da página  
+  [\vspace{0.4em}] % Espaço abaixo do título
+
+% Definindo um novo comando \newauthor para o Sumário
+\newcommand{\newauthor}[2]{\glacialbold{#1} \glacialregular{#2}}
+
+% Comando personalizado para adicionar um capítulo ao sumário com título, imagem e resumo
+\newcommand{\addchaptersummary}[4]{
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\protect\myfontsizeSumarioTitulos\MakeUppercase{#1}}
+  \addtocontents{toc}{
+    \protect\begin{minipage}[t][.7cm][t]{4cm} % Alinhamento superior
+      \protect\includegraphics[width=6em, height=6em]{#2}
+    \protect\end{minipage}%
+    \protect\begin{minipage}[t][.3cm][t]{9cm}% Definindo largura fixa para a minipage de texto com alinhamento superior
+      \protect\vspace{-6em} % Ajuste fino para alinhar o resumo do texto com o topo da figura (altere de acordo com o topo da figura)
+      \protect\myfontsizeSumarioResumo\glacialregular{#3}\\
+      \protect\vfill % Espaço flexível que empurra o texto do autor para baixo
+      \protect\vfill% Ajuste fino para alinhar o nome do autor do texto com a base da figura (altere de acordo com a base da figura)
+      \newauthor{Autor(a):}{#4} 
+      \protect\vspace{.2cm} % Ajuste fino para espaçamento entre figura e resumo e próximo artigo do sumário
+    \protect\end{minipage}\vfill}
+}
+
+%[t]{7em}
+% Remove o título "Sumário"
+\pretocmd{\tableofcontents}{\renewcommand{\contentsname}{}}{}{\undefined}
+% Redefinir o título da bibliografia
+\usepackage{etoolbox}
+\usepackage{adjustbox}
+\usepackage{bookmark} % Ajuda na criação de links corretos
+% Redefine a cor dos links no sumário
+\AtBeginDocument{
+    \pretocmd{\tableofcontents}{\hypersetup{linkcolor=black}}{}{}
+    \apptocmd{\tableofcontents}{\hypersetup{linkcolor=blue}}{}{}
+}
+
+% Definindo o comando \authorinfo
+\newcommand{\authorinfo}[2]{\vspace{1cm}\noindent%
+    \textbf{\small{\textit{Escrito por: \href{#2}{#1}}}}
+}
+\usepackage{microtype}
+
+% Redefine the numbering format for enumerate
+\renewcommand{\theenumi}{[\arabic{enumi}]}
+\renewcommand{\labelenumi}{\theenumi\ }
+% Adjust the spacing between the number and the text
+\setlist[enumerate,1]{left=0em, labelsep=.3em}
+% Define a command to combine multiple references into one set of brackets
+\newcommand{\refdois}[2]{%
+  \textbf{[}\ref{#1}%
+  \ifx&#2&\else
+    \textbf{, }\ref{#2}%
+  \fi
+  \textbf{]}%
+}
+
+% Define a command to combine up to three references into one set of brackets
+\newcommand{\reftres}[3]{%
+  \textbf{[}%
+  \ifx&#1&%
+    \else \ref{#1}%
+  \fi%
+  \ifx&#2&%
+    \else \ifx&#1&%
+      \ref{#2}%
+    \else
+      \textbf{, }\ref{#2}%
+    \fi%
+  \fi%
+  \ifx&#3&%
+    \else \ifx&#1&\ifx&#2&%
+      \ref{#3}%
+    \else
+      \textbf{, }\ref{#3}%
+    \fi%
+    \else
+      \textbf{, }\ref{#3}%
+    \fi%
+  \fi%
+  \textbf{]}%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

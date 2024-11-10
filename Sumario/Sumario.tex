@@ -1,0 +1,91 @@
+\newpage
+\thispagestyle{noheader}
+% OBS: Coloque sempre o que você quer deixar de fundo na página como primeiro comando
+% Adicione o TikZ para desenhar a linha vertical
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=10.8cm, base] ($(current page.north east) - (0,0)$) -- ($(current page.south east) - (0,0)$);
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[shift={(0, 2.2)}, anchor=center] at (4,-1) {\leaguespartanbold\myfontsizeSumario Sumário};
+  \node[shift={(-2.5, 0.2)}, anchor=center] at (4,-1) {\cooperbold \myfontsizeSumarioData \DataEdicao};
+\end{tikzpicture}
+
+% Adiciona um espaço vertical negativo para mover o sumário para cima
+\vspace*{-0.2cm} % Ajuste este valor conforme necessário para que caibam mais itens de sumário numa mesma página
+
+% Ajustar a largura do sumário usando adjustbox
+\makebox[0pt][l]{
+    \begin{adjustbox}{valign=t,minipage={.8\textwidth},margin={-3.5em,0pt}}
+        {\myfontsizeSumarioTitulos\glacialbold
+       \tableofcontents}
+    \end{adjustbox}
+}
+
+%LOGO, NOME DO JORNAL e outras informações do canto direito da página de Sumário
+%Edite a imagem em um editor gráfico antes de incluí-la no documento LaTex. Ferramentas como GIMP, Inkscape, ou Photoshop podem ser usadas para alterar a cor da imagem (use o arquivo svg da pasta Figs_Folha_Rosto).
+% Altere a cor e/ou tamanho no comando \myfontsizeNewstonSumario \myfontsizeJornalSumarioECC em Structure.tex caso queira outra que não seja a da edição
+\begin{tikzpicture}[remember picture, overlay]
+  % Adiciona a logo maçã branco
+  \node at (current page.north west) [anchor=north west, xshift=16.8cm, yshift=-0.7cm] {
+    \includegraphics[width=2.5cm]{Sumario/Figs_Sumario/Logo_Maca_Branco.png}
+  };
+    % Adiciona o texto Newston
+  \node at (current page.north west) [anchor=north west, xshift=16.2cm, yshift=-4cm] {
+    {\norwester\myfontsizeNewstonSumarioECC NEWSTON}
+  };
+   % Adiciona o texto Jornal
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-5cm] {
+    {\bebasneue\myfontsizeJornalSumarioECC \textls[590]{JORNAL}}
+  };
+   % Adiciona o texto Edições Anteriores
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-7.5cm] {
+    \parbox{20cm}{\glacialbold\myfontsizeEdAntSite ACESSE AS EDIÇÕES \\[0.4ex] ANTERIORES}
+  };
+  % Ícone site
+   \node at (current page.north west) [anchor=north west, xshift=16.2cm, yshift=-8.5cm] {
+    \includegraphics[width=.5cm]{Sumario/Figs_Sumario/Icone_Site.png}
+  };
+  % Site
+  \node at (current page.north west) [anchor=north west, xshift=16.8cm, yshift=-8.55cm] {
+    {\glacialregular\myfontsizeEdAntSite www.newston.com.br}
+  };
+   % Adiciona o texto Fale Conosco...
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-20.5cm] {
+    \parbox{20cm}{\glacialbold\myfontsizeEdAntSite FALE CONOSCO POR \\[0.8ex] NOSSAS REDES \\[0.8ex] SOCIAIS}
+  };
+  % Ícone Insta
+   \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-21.8cm] {
+    \includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_Insta.png}
+  };
+  % Ícone Face
+   \node at (current page.north west) [anchor=north west, xshift=17.25cm, yshift=-21.8cm] {
+    \includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_Facebook.png}
+  };
+  % Ícone X
+   \node at (current page.north west) [anchor=north west, xshift=18.25cm, yshift=-21.8cm] {
+    \includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_X.png}
+  };
+  % Usuario
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-22.65cm] {
+    {\bebasneue\myfontsizeUsuario \textls[150]{@NEWSTONJORNAL}}
+  };
+  % Ícone e-mail
+   \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-23.25cm] {
+    \includegraphics[width=.5cm]{Sumario/Figs_Sumario/Icone_Email.png}
+  };
+  % e-mail
+  \node at (current page.north west) [anchor=north west, xshift=16.9cm, yshift=-23.33cm] {
+    {\glacialregular\myfontsizeEdAntSite \textls[50]{newston@uem.br}}
+  };
+  % Adiciona a logo da UEM branco
+  \node at (current page.north west) [anchor=north west, xshift=16.2cm, yshift=-26.7cm] {
+    \includegraphics[width=3.7cm]{Figuras_Capa_ContraCapa/UEM_Logo_Modelo_Branco.png}
+  };
+\end{tikzpicture}
+
+
+
+

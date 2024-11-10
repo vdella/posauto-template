@@ -1,0 +1,32 @@
+% OBSERVAÇÃO: COMPILE PELO LUALATEX. CASO AINDA TENHA ALGUM CONFLITO NA COMPILAÇÂO FAÇA O SEGUINTE PROCEDIMENTO:
+% COMPILE USANDO O XELATEX (ABA MENU -> SETTINGS -> COMPILLER -> XELATEX) E APÒS COMPILAR E GERAR O PDF, COMPILE NOVAMENTE SÓ QUE
+% ALTERANDO O COMPILADOR PARA LUALATEX.
+\documentclass[12pt, a4paper]{report} 
+\input{Structure} % Novos pacotes, comandos, etc, adicione no arquivo Structure.tex
+
+% Troque a cor da edição, tamanho, fontes de letra, etc no arquivo Structure.tex
+
+% Comandos referentes a Edição (altere aqui que serão alterados automaticamente nos lugares em que são apresentados no pdf - ajuste apenas os valores de espaçamento e posicionamento na seção em que aparecem, caso seja necessário)
+\newcommand{\NumeroEdicao}{17}
+\newcommand{\ColecaoEdicao}{IV}
+\newcommand{\DataEdicao}{Agosto 2022}
+
+\begin{document}
+
+    \protect\input{Capa/Capa}
+    \protect\input{Folha_Rosto/Folha_Rosto}
+    \protect\input{Sumario/Sumario}
+    \protect\input{Equipe/Equipe}
+    \protect\input{Artigos/Artigo1} % Use essa linha d  e comando para adicionar novos artigos (recomenda-se criar um arquivo .tex para cada artigo)
+    %\protect\input{Artigos/Artigo2}
+
+    % Decidimos remover o artigo 2 para que o limite de compilação do Free Trial do Overleaf não seja excedido para usuários gratuitos
+    \protect\input{Artigos/Artigo3}
+    \protect\input{Artigos/Artigo4}
+    \protect\input{Referencias/Referencias}
+    \protect\input{Tirinha/Tirinha}
+    \protect\input{ContraCapa/ContraCapa}
+    
+\end{document}
+
+% Comandos LaTex desenvolvidos por Sanderson Carlos Ribeiro (e-mail: San.Car.Oficial@gmail.com) com o auxílio do ChatGPT. Design da Edição por Vítor Hugo Ribeiro (e-mail: vitorhibeiro@gmail.com).

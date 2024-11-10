@@ -1,0 +1,42 @@
+\newpage
+\thispagestyle{empty}
+% Linhas verticais Contra Capa
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=3.1cm, base] ($(current page.north east) - (0,0)$) -- ($(current page.south east) - (0,0)$);
+    \draw[line width=1.05cm, base] ($(current page.north east) - (2.25,0)$) -- ($(current page.south east) - (2.25,0)$);
+    \draw[line width=22.6cm, base] ($(current page.north east) - (14.25,0)$) -- ($(current page.south east) - (14.25,0)$);
+\end{tikzpicture}
+
+% Texto
+\begin{tikzpicture}[remember picture, overlay]
+  % Adiciona texto
+  \node at (current page.north west) [anchor=north west, xshift=2cm, yshift=-3cm] {\begin{minipage}[t]{8cm} % Define a largura da minipage igual à largura da figura
+  \setlength{\baselineskip}{1.5\baselineskip}
+    {\clearsansthin\myfontsizeTemaCapaVerticalECC O Newston Jornal surgiu como uma iniciativa estudantil envolvendo alunos dos cursos de Física, Letras e Arquitetura e Urbanismo da Universidade Estadual de Maringá (UEM) em 2018, e foi oficializado como projeto de extensão vinculado oficialmente à universidade em março de 2021.} \end{minipage}
+  };
+   \node at (current page.north west) [anchor=north west, xshift=2cm, yshift=-10.5cm] {\begin{minipage}[t]{8cm} % Define a largura da minipage igual à largura da figura
+  \setlength{\baselineskip}{1.5\baselineskip}
+    {\clearsansthin\myfontsizeTemaCapaVerticalECC Desde o início, a finalidade do projeto consiste em produzir material para divulgação científica e cultural que atenda à comunidade externa e interna da universidade, visando sempre a integração de diversas áreas do conhecimento.} \end{minipage}
+  };
+\end{tikzpicture}
+
+% Logo do Newston e da UEM
+\begin{tikzpicture}[remember picture, overlay]
+  % Adiciona a logo maçã branco
+  \node at (current page.north west) [anchor=north west, xshift=2cm, yshift=-25.7cm] {
+    \includegraphics[width=1.5cm]{Sumario/Figs_Sumario/Logo_Maca_Branco.png}
+  };
+    % Adiciona o texto Newston
+  \node at (current page.north west) [anchor=north west, xshift=3.8cm, yshift=-26cm] {
+    {\norwester\myfontsizeNewstonSumarioECC NEWSTON}
+  };
+   % Adiciona o texto Jornal
+  \node at (current page.north west) [anchor=north west, xshift=3.85cm, yshift=-27cm] {
+    {\bebasneue\myfontsizeJornalSumarioECC \textls[590]{JORNAL}}
+  };
+  % Adiciona a logo da UEM Branco
+  \node at (current page.north west) [anchor=north west, xshift=12.5cm, yshift=-25.7cm] {
+    \includegraphics[width=0.22\textwidth]{Figuras_Capa_ContraCapa/UEM_Logo_Modelo_Branco.png}
+  };
+\end{tikzpicture}
+
