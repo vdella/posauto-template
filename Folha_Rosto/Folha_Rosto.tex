@@ -67,7 +67,7 @@
 };
   % Tema Principal
   \node[shift={(0, -5)}, anchor=center] at (4, -1) {
-    \parbox{5cm}{\centering \hammersmithone \myfontsizeColecaoTema HISTÓRIA DO\\[1.5ex]UNIVERSO:\\[1.5ex]ERA PRIMORDIAL}
+    \parbox{5cm}{\centering \hammersmithone \myfontsizeColecaoTema ENERGIAS RENOVÁVEIS:\\[1.5ex]MICRORREDES}
   };
   
   % Desenhar uma linha pontilhada
@@ -80,10 +80,22 @@
 \end{tikzpicture}
 
 
+%\begin{tikzpicture}[remember picture, overlay]
+%    \node[shift={(4.1, -15)}, anchor=center] at (5.7, -1) {
+%        \begin{tikzpicture}
+%             % Texto principal com contorno
+%            \node[anchor=center, inner sep=0pt, outer sep=0pt] {
+%                \parbox{20cm}{\hammersmithone\myfontsizeTituloTema \contour{base}{
+%                    \shortstack[l]{DIVULGAÇÃO\\[0.4ex] CIENTÍFICA}}}
+%            };
+%        \end{tikzpicture}
+%    };
+%\end{tikzpicture}
 \begin{tikzpicture}[remember picture, overlay]
   % Tema Principal
   \node[shift={(4.1, -15)}, anchor=center] at (5.7, -1) {
-    \parbox{20cm}{\hammersmithone \myfontsizeDivulgacaoCientifica\textls[150]{DIVULGAÇÃO\\[0.4ex]CIENTÍFICA\\[1ex]E CULTURAL\\[1ex] PARA A\\[1ex]COMUNIDADE}}
+    \parbox{20cm}{\hammersmithone \myfontsizeDivulgacaoCientifica \textls[150]{
+            \contour{base}{\shortstack[l]{DIVULGAÇÃO\\[0.4ex] CIENTÍFICA\\[1ex] E CULTURAL\\[1ex] PARA A\\[1ex] COMUNIDADE}}}}
   };
 \end{tikzpicture}
 
